@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>modAlphaCipher: Исходный файл modAlphaCipher.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">modAlphaCipher
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">modAlphaCipher.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="modAlphaCipher_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;locale&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;codecvt&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classmodAlphaCipher.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classmodAlphaCipher.html">modAlphaCipher</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classmodAlphaCipher.html#abdf290d328c2b9dd9dde0557e28c87d9">   22</a></span>&#160;    std::wstring_convert&lt;std::codecvt_utf8&lt;wchar_t&gt;, <span class="keywordtype">wchar_t</span>&gt; <a class="code" href="classmodAlphaCipher.html#abdf290d328c2b9dd9dde0557e28c87d9">codec</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classmodAlphaCipher.html#ab7e0c7d3c87f4c8b7435d84f31c6cb62">   23</a></span>&#160;    std::wstring <a class="code" href="classmodAlphaCipher.html#ab7e0c7d3c87f4c8b7435d84f31c6cb62">numAlpha</a> =</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        L<span class="stringliteral">&quot;АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ&quot;</span>; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classmodAlphaCipher.html#ad896cbfa7d4c32d1c9627b0812b4a677">   25</a></span>&#160;    std::map &lt;wchar_t,int&gt; <a class="code" href="classmodAlphaCipher.html#ad896cbfa7d4c32d1c9627b0812b4a677">alphaNum</a>; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classmodAlphaCipher.html#aaddfb3bc0a3806b17e94c56fea5bad87">   26</a></span>&#160;    std::vector &lt;int&gt; <a class="code" href="classmodAlphaCipher.html#aaddfb3bc0a3806b17e94c56fea5bad87">key</a>; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::vector&lt;int&gt; <a class="code" href="classmodAlphaCipher.html#ab8f9e5e8ee499c8df2d1e45822f5ac7f">convert</a>(<span class="keyword">const</span> std::string&amp; s); </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::string <a class="code" href="classmodAlphaCipher.html#ab8f9e5e8ee499c8df2d1e45822f5ac7f">convert</a>(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; v); </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::string <a class="code" href="classmodAlphaCipher.html#a6e22f85d0847650a18be5838ca9175c5">getValidKey</a>(<span class="keyword">const</span> std::string &amp; s); </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::string <a class="code" href="classmodAlphaCipher.html#ace571c0bf1e21e6cb31f3df78a1812bd">getValidOpenText</a>(<span class="keyword">const</span> std::string &amp; s); </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::string <a class="code" href="classmodAlphaCipher.html#a29591c14f56205ecad3d99689bf72193">getValidCipherText</a>(<span class="keyword">const</span> std::string &amp; s); </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classmodAlphaCipher.html#a4f0a86c20f5d836f66cb1e640d875e6b">   69</a></span>&#160;    <a class="code" href="classmodAlphaCipher.html#a4f0a86c20f5d836f66cb1e640d875e6b">modAlphaCipher</a>()=<span class="keyword">delete</span>; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classmodAlphaCipher.html#a4f0a86c20f5d836f66cb1e640d875e6b">modAlphaCipher</a>(<span class="keyword">const</span> std::string&amp; skey); </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::string <a class="code" href="classmodAlphaCipher.html#ab855d6b2ba63a70d84abc8b15700da63">encrypt</a>(<span class="keyword">const</span> std::string&amp; open_text); </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    std::string <a class="code" href="classmodAlphaCipher.html#af1f0fa8ec93df56aa7657494de2a3f00">decrypt</a>(<span class="keyword">const</span> std::string&amp; cipher_text); </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classcipher__error.html">   99</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcipher__error.html">cipher_error</a> : <span class="keyword">public</span> std::invalid_argument</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classcipher__error.html#a18cf27d9c2cd2538d3cb8f17e9a55f3e">  102</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcipher__error.html#a18cf27d9c2cd2538d3cb8f17e9a55f3e">cipher_error</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* what_arg):std::invalid_argument(what_arg) {} </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classcipher__error.html#aac662e216a84bfeb873303c7b88d029e">  103</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcipher__error.html#aac662e216a84bfeb873303c7b88d029e">cipher_error</a> (<span class="keyword">const</span> std::string&amp; what_arg):std::invalid_argument(what_arg) {} </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="ttc" id="aclasscipher__error_html"><div class="ttname"><a href="classcipher__error.html">cipher_error</a></div><div class="ttdoc">Созданное исключение</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.h:100</div></div>
+<div class="ttc" id="aclasscipher__error_html_a18cf27d9c2cd2538d3cb8f17e9a55f3e"><div class="ttname"><a href="classcipher__error.html#a18cf27d9c2cd2538d3cb8f17e9a55f3e">cipher_error::cipher_error</a></div><div class="ttdeci">cipher_error(const char *what_arg)</div><div class="ttdoc">ошибка,возвращающая символ</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.h:102</div></div>
+<div class="ttc" id="aclasscipher__error_html_aac662e216a84bfeb873303c7b88d029e"><div class="ttname"><a href="classcipher__error.html#aac662e216a84bfeb873303c7b88d029e">cipher_error::cipher_error</a></div><div class="ttdeci">cipher_error(const std::string &amp;what_arg)</div><div class="ttdoc">ошибка,возвращающая строку</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.h:103</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html"><div class="ttname"><a href="classmodAlphaCipher.html">modAlphaCipher</a></div><div class="ttdoc">Шифрование методом Гронсфельда</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.h:20</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_a29591c14f56205ecad3d99689bf72193"><div class="ttname"><a href="classmodAlphaCipher.html#a29591c14f56205ecad3d99689bf72193">modAlphaCipher::getValidCipherText</a></div><div class="ttdeci">std::string getValidCipherText(const std::string &amp;s)</div><div class="ttdoc">Проверка зашифрованного текста</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.cpp:88</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_a4f0a86c20f5d836f66cb1e640d875e6b"><div class="ttname"><a href="classmodAlphaCipher.html#a4f0a86c20f5d836f66cb1e640d875e6b">modAlphaCipher::modAlphaCipher</a></div><div class="ttdeci">modAlphaCipher()=delete</div><div class="ttdoc">запрет конструктора без параметров</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_a6e22f85d0847650a18be5838ca9175c5"><div class="ttname"><a href="classmodAlphaCipher.html#a6e22f85d0847650a18be5838ca9175c5">modAlphaCipher::getValidKey</a></div><div class="ttdeci">std::string getValidKey(const std::string &amp;s)</div><div class="ttdoc">Проверка и преобразование ключа</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.cpp:51</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_aaddfb3bc0a3806b17e94c56fea5bad87"><div class="ttname"><a href="classmodAlphaCipher.html#aaddfb3bc0a3806b17e94c56fea5bad87">modAlphaCipher::key</a></div><div class="ttdeci">std::vector&lt; int &gt; key</div><div class="ttdoc">ключ</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.h:26</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_ab7e0c7d3c87f4c8b7435d84f31c6cb62"><div class="ttname"><a href="classmodAlphaCipher.html#ab7e0c7d3c87f4c8b7435d84f31c6cb62">modAlphaCipher::numAlpha</a></div><div class="ttdeci">std::wstring numAlpha</div><div class="ttdoc">алфавит по порядку</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.h:23</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_ab855d6b2ba63a70d84abc8b15700da63"><div class="ttname"><a href="classmodAlphaCipher.html#ab855d6b2ba63a70d84abc8b15700da63">modAlphaCipher::encrypt</a></div><div class="ttdeci">std::string encrypt(const std::string &amp;open_text)</div><div class="ttdoc">Зашифровывание</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.cpp:17</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_ab8f9e5e8ee499c8df2d1e45822f5ac7f"><div class="ttname"><a href="classmodAlphaCipher.html#ab8f9e5e8ee499c8df2d1e45822f5ac7f">modAlphaCipher::convert</a></div><div class="ttdeci">std::vector&lt; int &gt; convert(const std::string &amp;s)</div><div class="ttdoc">Преобразование строка-вектор</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.cpp:33</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_abdf290d328c2b9dd9dde0557e28c87d9"><div class="ttname"><a href="classmodAlphaCipher.html#abdf290d328c2b9dd9dde0557e28c87d9">modAlphaCipher::codec</a></div><div class="ttdeci">std::wstring_convert&lt; std::codecvt_utf8&lt; wchar_t &gt;, wchar_t &gt; codec</div><div class="ttdoc">переменная для преобразования широких строк в обычные;.</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.h:22</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_ace571c0bf1e21e6cb31f3df78a1812bd"><div class="ttname"><a href="classmodAlphaCipher.html#ace571c0bf1e21e6cb31f3df78a1812bd">modAlphaCipher::getValidOpenText</a></div><div class="ttdeci">std::string getValidOpenText(const std::string &amp;s)</div><div class="ttdoc">Проверка и преобразование нормального текста</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.cpp:69</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_ad896cbfa7d4c32d1c9627b0812b4a677"><div class="ttname"><a href="classmodAlphaCipher.html#ad896cbfa7d4c32d1c9627b0812b4a677">modAlphaCipher::alphaNum</a></div><div class="ttdeci">std::map&lt; wchar_t, int &gt; alphaNum</div><div class="ttdoc">ассоциативный массив &quot;номер по символу&quot;.</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.h:25</div></div>
+<div class="ttc" id="aclassmodAlphaCipher_html_af1f0fa8ec93df56aa7657494de2a3f00"><div class="ttname"><a href="classmodAlphaCipher.html#af1f0fa8ec93df56aa7657494de2a3f00">modAlphaCipher::decrypt</a></div><div class="ttdeci">std::string decrypt(const std::string &amp;cipher_text)</div><div class="ttdoc">Расшифровывание</div><div class="ttdef"><b>Definition:</b> modAlphaCipher.cpp:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
